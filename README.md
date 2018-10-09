@@ -15,10 +15,10 @@ Below is Brendan's Pizza Parlor ingredient information to help assist with this 
 | Ingredient    | Food Cost     | Menu Price  | Calories    |
 | ------------- |---------------| ------------|-------------|
 | Pizza Crust   |     $2.29     |   $6.50     |   550       |
-| Red Sauce     |     $0.31     |   $0.50     |    80       |
+| Red Sauce     |     $0.31     |   $0.00     |    80       |
 | Alfredo Sauce |     $0.85     |   $1.50     |   220       |
 | BBQ Sauce     |     $0.47     |   $0.75     |   140       |
-| Shredded Mozz |     $0.30     |   $1.00     |   220       |
+| Shredded Mozz |     $0.30     |   $0.00     |   220       |
 | Fresh Mozz    |     $0.91     |   $2.00     |   200       |
 | Onions        |     $0.19     |   $0.50     |    50       |
 | Peppers       |     $0.21     |   $0.50     |    40       |
@@ -33,4 +33,33 @@ For each possible pizza, there should be information available on:
 - Total Calories
 - Total Cost for Brendan's Pizza Parlor
 - Total Price for customer
+
+## System Design Solution
+![Subsystem UML](Images/SubsystemUML.png?raw=true "SubsystemUML")
+
+### Initial Pattern Participants
+
+| Class Name     | GoF Role          | Responsibilities | 
+| -------------- |-------------------| -----------------|
+| Pizza          | Component         | Defines the interface for all Pizza's that can be ordered in Brendan's Pizza Parlor
+| BasePizza      | ConcreteComponent | Defines the base pizza, just pizza crust, for ingredients to be added to
+| Ingredient     | Decorator         | Defines an ingredient which adds additional responsibilities (calories, food cost, and menu cost) to the BasePizza
+| WithIngredient | ConcreteDecorator | Adds calories/food cost/menu cost to the BasePizza
+
+#### Rationale
+Following the Gang of Four Pattern, it makes senses to have a Base Pizza with just crust, and having Decorators for each possible addition to the pizza.
+
+Having a Pizza Interface makes sense, since each pizza must have:
+```
+getCalories()
+getTotalFoodCost()
+getTotalPrice()
+```
+
+#### Deviations from pattern:
+Since an Ingredient can't exist without a Pizza, it made sense to have a composition relationship with Pizza, rather than aggregation.
+
+Since every pizza needs a food cost, calorie count, and menu price, it made sense for the Pizza interface to have more than just one operation() method. Not all ingredients will have a unique implementation of each method, as some items like sauce and cheese are complimentary to customers for ordering a base pizza. These will just call the super class's method.
+
+
 
