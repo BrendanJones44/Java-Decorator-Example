@@ -3,9 +3,9 @@ package main.ingredients;
 import main.Pizza;
 
 public class WithPepperoni extends Ingredient {
-    private int calories = 40;
-    private double foodCost = 0.21;
-    private double menuPrice = 0.50;
+    private int calories = 160;
+    private double foodCost = 0.22;
+    private double menuPrice = 0.75;
 
     public WithPepperoni(Pizza basePizza) {
         super(basePizza);
