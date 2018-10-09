@@ -3,8 +3,8 @@ package main.ingredients;
 import main.Pizza;
 
 public class WithPeppers extends Ingredient {
-    private int calories = 50;
-    private double foodCost = 0.19;
+    private int calories = 40;
+    private double foodCost = 0.21;
     private double menuPrice = 0.50;
 
     public WithPeppers(Pizza basePizza) {
