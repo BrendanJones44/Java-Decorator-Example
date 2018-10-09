@@ -6,9 +6,9 @@ public class BasePizza implements Pizza {
     private double totalPrice;
 
     public BasePizza() {
-        this.calories = 0;
-        this.foodCost = 0.0;
-        this.totalPrice = 0.0;
+        this.calories = 550;
+        this.foodCost = 2.29;
+        this.totalPrice = 6.50;
     }
 
     public int getCalories() {
