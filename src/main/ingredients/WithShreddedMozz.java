@@ -3,8 +3,8 @@ package main.ingredients;
 import main.Pizza;
 
 public class WithShreddedMozz extends Ingredient {
-    private int calories = 0;
-    private double foodCost = 0.00;
+    private int calories = 220;
+    private double foodCost = 0.30;
 
     public WithShreddedMozz(Pizza basePizza) {
         super(basePizza);
