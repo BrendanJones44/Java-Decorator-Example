@@ -61,5 +61,5 @@ Since an Ingredient can't exist without a Pizza, it made sense to have a composi
 
 Since every pizza needs a food cost, calorie count, and menu price, it made sense for the Pizza interface to have more than just one operation() method. Not all ingredients will have a unique implementation of each method, as some items like sauce and cheese are complimentary to customers for ordering a base pizza. These will just call the super class's method.
 
-
-
+### Final UML Diagram
+![Final UML Diagram](Images/FinalUML.png?raw=true "FinalUML")
