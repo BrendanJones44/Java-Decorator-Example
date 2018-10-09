@@ -45,6 +45,11 @@ For each possible pizza, there should be information available on:
 ## System Design Solution
 ![Subsystem UML](Images/SubsystemUML.png?raw=true "SubsystemUML")
 
+### UML With GoF Labels
+Here, classes are labeled with `<<Role in GOF Pattern>>` to help visually see the pattern being adopted
+
+![Subsystem UML With Participants](Images/SubsystemUML-GOF-Stereotypes.png?raw=true "SubsystemUMLWithParticipants")
+
 ### Initial Pattern Participants
 
 | Class Name     | GoF Role          | Responsibilities | 
