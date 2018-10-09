@@ -1,6 +1,12 @@
 # Decorator Design Pattern Example in Java
 
-## Original Pattern from Gang of Four:
+## Getting stated
+Simply download the source code, compile, and run
+ ```java test/PizzaParlorTest.java```
+
+ Note this requires `JUnit-4` as a dependency.
+
+## Original Pattern from Gang of Four
 ![Gang of Four UML of pattern](Images/GangOfFourUML.png?raw=true "GangOfFourUML")
 
 ## Pizza Parlor Problem Statement
