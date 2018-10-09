@@ -6,6 +6,10 @@ import static org.junit.Assert.assertEquals;
 public class PizzaParlorTest {
     private static final double DELTA = 1e-15;
 
+    private static final int CHEESE_PIZZA_CALORIES = 850;
+    private static final double CHEESE_PIZZA_FOOD_COST = 2.90;
+    private static final double CHEESE_PIZZA_PRICE = 6.50;
+
     @Test
     public void basePizza() {
         Pizza pizza = new BasePizza();
@@ -46,11 +50,11 @@ public class PizzaParlorTest {
     public void cheesePizza() {
         Pizza pizza = new WithShreddedMozz(new WithSauce(new BasePizza()));
 
-        assertEquals("Total calories do not match!", 850,
+        assertEquals("Total calories do not match!", CHEESE_PIZZA_CALORIES,
                 pizza.getCalories());
-        assertEquals("Food cost does not match!", 2.90,
+        assertEquals("Food cost does not match!", CHEESE_PIZZA_FOOD_COST,
                 pizza.getFoodCost(), DELTA);
-        assertEquals("Menu price does not match!", 6.50,
+        assertEquals("Menu price does not match!", CHEESE_PIZZA_PRICE,
                 pizza.getTotalPrice(), DELTA);
     }
 }
