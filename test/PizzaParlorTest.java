@@ -24,13 +24,25 @@ public class PizzaParlorTest {
 
     @Test
     public void tomatoPizza() {
-        Pizza pizza = new WithSauce(new BasePizza());
+        Pizza pizza = new WithRedSauce(new BasePizza());
 
         assertEquals("Total calories do not match!", 630,
                 pizza.getCalories());
         assertEquals("Food cost does not match!", 2.60,
                 pizza.getFoodCost(), DELTA);
         assertEquals("Menu price does not match!", 6.50,
+                pizza.getTotalPrice(), DELTA);
+    }
+
+    @Test
+    public void alfredoPizza() {
+        Pizza pizza = new WithAlfredoSauce(new BasePizza());
+
+        assertEquals("Total calories do not match!", 770,
+                pizza.getCalories());
+        assertEquals("Food cost does not match!", 3.14,
+                pizza.getFoodCost(), DELTA);
+        assertEquals("Menu price does not match!", 8.00,
                 pizza.getTotalPrice(), DELTA);
     }
 
@@ -48,7 +60,7 @@ public class PizzaParlorTest {
 
     @Test
     public void cheesePizza() {
-        Pizza pizza = new WithShreddedMozz(new WithSauce(new BasePizza()));
+        Pizza pizza = new WithShreddedMozz(new WithRedSauce(new BasePizza()));
 
         assertEquals("Total calories do not match!", CHEESE_PIZZA_CALORIES,
                 pizza.getCalories());
@@ -60,7 +72,7 @@ public class PizzaParlorTest {
 
     @Test
     public void margheritaPizza() {
-        Pizza pizza = new WithFreshMozz(new WithSauce(new BasePizza()));
+        Pizza pizza = new WithFreshMozz(new WithRedSauce(new BasePizza()));
 
         assertEquals("Total calories do not match!", 830,
                 pizza.getCalories());
@@ -73,7 +85,7 @@ public class PizzaParlorTest {
     @Test
     public void onionPizza() {
         Pizza pizza = new WithOnions(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!", CHEESE_PIZZA_CALORIES + 50,
                 pizza.getCalories());
@@ -86,7 +98,7 @@ public class PizzaParlorTest {
     @Test
     public void peppersPizza() {
         Pizza pizza = new WithPeppers(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!", CHEESE_PIZZA_CALORIES + 40,
                 pizza.getCalories());
@@ -99,7 +111,7 @@ public class PizzaParlorTest {
     @Test
     public void pepperoniPizza() {
         Pizza pizza = new WithPepperoni(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!",
                 CHEESE_PIZZA_CALORIES + 160, pizza.getCalories());
@@ -112,7 +124,7 @@ public class PizzaParlorTest {
     @Test
     public void sausagePizza() {
         Pizza pizza = new WithSausage(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!",
                 CHEESE_PIZZA_CALORIES + 210, pizza.getCalories());
@@ -125,7 +137,7 @@ public class PizzaParlorTest {
     @Test
     public void chickenPizza() {
         Pizza pizza = new WithChicken(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!",
                 CHEESE_PIZZA_CALORIES + 140, pizza.getCalories());
@@ -138,7 +150,7 @@ public class PizzaParlorTest {
     @Test
     public void beefPizza() {
         Pizza pizza = new WithBeef(new WithShreddedMozz(
-                new WithSauce(new BasePizza())));
+                new WithRedSauce(new BasePizza())));
 
         assertEquals("Total calories do not match!",
                 CHEESE_PIZZA_CALORIES + 230, pizza.getCalories());

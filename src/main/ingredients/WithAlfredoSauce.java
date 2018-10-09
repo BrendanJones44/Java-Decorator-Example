@@ -2,11 +2,11 @@ package main.ingredients;
 
 import main.Pizza;
 
-public class WithSauce extends Ingredient {
+public class WithAlfredoSauce extends Ingredient {
     private int calories = 80;
     private double foodCost = 0.31;
 
-    public WithSauce(Pizza basePizza) {
+    public WithAlfredoSauce(Pizza basePizza) {
         super(basePizza);
     }
 
