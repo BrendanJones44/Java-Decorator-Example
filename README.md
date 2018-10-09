@@ -8,6 +8,8 @@ You are desiging a system for which pizza's can be ordered at Brendan's Pizza Pa
 
 Rather than create numerous menu items, Brendan's Pizza Parlor offers build your own pizza's. Desipite having no technical menu items, Brendan's Pizza Parlor is required by law to report nutritional information for anything they serve. Brendan's Pizza parlor would also like know how profitable certain pizza combinations are so they could make specialty menu items in the future.
 
+Brendan's Pizza Parlor starts all pizza's at $6.50. This includes cheese and sauce, however customers may vouch for a "Tomato Pie" where it's just sauce and crust, or a "White Pie" where it's just cheese. These items still cost $6.50 though.
+
 Below is Brendan's Pizza Parlor ingredient information to help assist with this problem:
 
 ### Ingredient Information
