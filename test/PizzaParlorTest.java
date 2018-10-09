@@ -95,4 +95,17 @@ public class PizzaParlorTest {
         assertEquals("Menu price does not match!", CHEESE_PIZZA_PRICE + 0.50,
                 pizza.getTotalPrice(), DELTA);
     }
+
+    @Test
+    public void pepperoniPizza() {
+        Pizza pizza = new WithPeppers(new WithShreddedMozz(
+                new WithSauce(new BasePizza())));
+
+        assertEquals("Total calories do not match!",
+                CHEESE_PIZZA_CALORIES + 160, pizza.getCalories());
+        assertEquals("Food cost does not match!", CHEESE_PIZZA_FOOD_COST + 0.22,
+                pizza.getFoodCost(), DELTA);
+        assertEquals("Menu price does not match!", CHEESE_PIZZA_PRICE + 0.75®,
+                pizza.getTotalPrice(), DELTA);
+    }
 }
