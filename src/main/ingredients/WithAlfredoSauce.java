@@ -3,8 +3,9 @@ package main.ingredients;
 import main.Pizza;
 
 public class WithAlfredoSauce extends Ingredient {
-    private int calories = 80;
-    private double foodCost = 0.31;
+    private int calories = 220;
+    private double foodCost = 0.85;
+    private double menuPrice = 1.50;
 
     public WithAlfredoSauce(Pizza basePizza) {
         super(basePizza);
@@ -18,6 +19,11 @@ public class WithAlfredoSauce extends Ingredient {
     @Override
     public double getFoodCost() {
         return super.getFoodCost() + this.foodCost;
+    }
+
+    @Override
+    public double getTotalPrice() {
+        return super.getTotalPrice() + this.menuPrice;
     }
 
 }
