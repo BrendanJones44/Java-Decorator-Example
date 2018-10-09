@@ -3,9 +3,9 @@ package main.ingredients;
 import main.Pizza;
 
 public class WithFreshMozz extends Ingredient {
-    private int calories = 220;
-    private double foodCost = 0.30;
-    private double menuPrice = 0.00;
+    private int calories = 200;
+    private double foodCost = 0.91;
+    private double menuPrice = 2.00;
 
     public WithFreshMozz(Pizza basePizza) {
         super(basePizza);

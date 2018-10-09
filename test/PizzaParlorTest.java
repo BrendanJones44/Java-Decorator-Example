@@ -62,7 +62,7 @@ public class PizzaParlorTest {
     public void margheritaPizza() {
         Pizza pizza = new WithFreshMozz(new WithSauce(new BasePizza()));
 
-        assertEquals("Total calories do not match!", 750,
+        assertEquals("Total calories do not match!", 830,
                 pizza.getCalories());
         assertEquals("Food cost does not match!", 3.51,
                 pizza.getFoodCost(), DELTA);
